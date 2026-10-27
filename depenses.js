@@ -31,3 +31,33 @@ function trouverMaximum(depenses) {
   }
   return Math.max(...depenses);
 }
+
+// TODO 5 : créer une copie triée, puis afficher le rapport demandé.
+
+// copié triée
+
+const copieTriee = [...depensesSemaine].sort((a, b) => a - b); // number[], en FCFA
+
+const total = calculerTotal(depensesSemaine);                    // number, en FCFA
+const moyenne = calculerMoyenne(depensesSemaine);                // number, en FCFA par jour
+const grossesDepenses = filtrerGrossesDepenses(depensesSemaine); // number[], en FCFA
+const maximum = trouverMaximum(depensesSemaine);                 // number, en FCFA
+
+// afficher le rapport demandé
+
+console.log("=== Rapport des dépenses ===");
+console.log(`Tableau avant le tri : ${depensesSemaine.join(", ")}`);
+console.log("======================================")
+console.log(`Total : ${total} FCFA`);
+console.log("======================================")
+console.log(`Moyenne par jour : ${Math.round(moyenne)} FCFA`);
+console.log("======================================")
+console.log(`Dépenses au-dessus de 2000 FCFA : ${grossesDepenses.join(", ")}`);
+console.log("======================================")
+console.log(`Plus grande dépense : ${maximum} FCFA`);
+console.log("======================================")
+console.log(`Copie triée : ${copieTriee.join(", ")}`);
+console.log("======================================")
+console.log(`Tableau après le tri : ${depensesSemaine.join(", ")}`);
+
+console.log("======================================")
