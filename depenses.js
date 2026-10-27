@@ -22,3 +22,12 @@ function calculerMoyenne(depenses) {
 function filtrerGrossesDepenses(depenses) {
   return depenses.filter((montant) => montant > 2000);
 }
+
+// TODO 4 : retourner la plus grande dépense ; 0 si le tableau est vide.
+
+function trouverMaximum(depenses) {
+  if (depenses.length === 0) {
+    return 0;
+  }
+  return Math.max(...depenses);
+}
