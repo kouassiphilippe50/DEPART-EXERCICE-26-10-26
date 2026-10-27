@@ -16,3 +16,9 @@ function calculerMoyenne(depenses) {
   }
   return calculerTotal(depenses) / depenses.length;
 }
+
+// TODO 3 : retourner les montants strictement supérieurs à 2000 FCFA.
+
+function filtrerGrossesDepenses(depenses) {
+  return depenses.filter((montant) => montant > 2000);
+}
